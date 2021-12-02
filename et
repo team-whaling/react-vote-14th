@@ -1,0 +1,59 @@
+[33mcommit edf913cd3557abc274e8bc7f4f8a0bdc10600c85[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/vote[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Reflog: HEAD@{0} (TaeeunKim <taeeunkim@likelion.net>)
+Reflog message: reset: moving to HEAD^
+Author: Kiuk <ugiya0628@icloud.com>
+Date:   Thu Dec 2 02:25:36 2021 +0900
+
+    [WHAL-15] Feat: 잡다한 초기 설정 및 signup 기능 추가 (서버랑 테스트 필요!) (#3)
+    
+    * [DEV] chore: styled component 추가
+    
+    * [DEV] chore: ant 적용
+    
+    * [WHAL-15] feat: Row, Col Container 컴포넌트 추가
+    
+    * [DEV] chore: styled-component 타입 추가
+    
+    * [WHAL-15] feat: signup 기능
+
+[33mcommit 2c177e413ef0ce949ae956cace0256752a98ba09[m[33m ([m[1;31morigin/feature/vote[m[33m)[m
+Reflog: HEAD@{1} (TaeeunKim <taeeunkim@likelion.net>)
+Reflog message: commit: [WHAL-12] Feat: 투표 레이아웃 설정 뼈대 생성
+Author: TaeeunKim <taeeunkim@likelion.net>
+Date:   Fri Dec 3 00:21:15 2021 +0900
+
+    [WHAL-12] Feat: 투표 레이아웃 설정 뼈대 생성
+
+[33mcommit edf913cd3557abc274e8bc7f4f8a0bdc10600c85[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/vote[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Reflog: HEAD@{2} (TaeeunKim <taeeunkim@likelion.net>)
+Reflog message: pull origin develop: Fast-forward
+Author: Kiuk <ugiya0628@icloud.com>
+Date:   Thu Dec 2 02:25:36 2021 +0900
+
+    [WHAL-15] Feat: 잡다한 초기 설정 및 signup 기능 추가 (서버랑 테스트 필요!) (#3)
+    
+    * [DEV] chore: styled component 추가
+    
+    * [DEV] chore: ant 적용
+    
+    * [WHAL-15] feat: Row, Col Container 컴포넌트 추가
+    
+    * [DEV] chore: styled-component 타입 추가
+    
+    * [WHAL-15] feat: signup 기능
+
+[33mcommit 628d700c63437322e9f134d9ee1c811863495887[m[33m ([m[1;32mdevelop[m[33m)[m
+Reflog: HEAD@{3} (TaeeunKim <taeeunkim@likelion.net>)
+Reflog message: checkout: moving from develop to feature/vote
+Author: kiuk <ugiya0628@icloud.com>
+Date:   Sat Nov 27 11:09:50 2021 +0900
+
+    [DEV] Chore: 디렉토리 구조
+
+[33mcommit 628d700c63437322e9f134d9ee1c811863495887[m[33m ([m[1;32mdevelop[m[33m)[m
+Reflog: HEAD@{4} (TaeeunKim <taeeunkim@likelion.net>)
+Reflog message: clone: from https://github.com/team-whaling/react-vote-14th.git
+Author: kiuk <ugiya0628@icloud.com>
+Date:   Sat Nov 27 11:09:50 2021 +0900
+
+    [DEV] Chore: 디렉토리 구조
