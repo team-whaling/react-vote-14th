@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { RootState, useAppSelector } from '../../app/store';
-import { getCandidateThunk } from '../../app/vote/thunks';
+import React from 'react';
+import useVote from '../../hooks/useVote';
 const Vote = () => {
-  const dispatch = useDispatch();
-  const candidates = useAppSelector((state) => state.voteReducer);
-  useEffect(() => {
-    dispatch(getCandidateThunk());
-  }, [dispatch]);
+  const { candidates } = useVote();
   return (
     <div>
       {candidates.map((candidate) => {

@@ -11,7 +11,5 @@ const initialState: CandidatePayloadI[] = [
 export const voteReducer = createReducer<CandidatePayloadI[], ActionT>(
   initialState,
 )
-  .handleAction(getCandidates.success, (state, action) =>
-    state.concat(action.payload),
-  )
+  .handleAction(getCandidates.success, (state, action) => action.payload)
   .handleAction(postVote.success, (state, action) => state);

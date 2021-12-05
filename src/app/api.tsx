@@ -3,7 +3,7 @@ import axios from './customAxios';
 
 class Api {
   requestGetCandidates = async () => {
-    const res = await axios.get('');
+    const res = await axios.get('candidates/');
     return res.data;
   };
 
