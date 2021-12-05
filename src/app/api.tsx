@@ -1,15 +1,18 @@
 import { LoginPayloadI, SignUpPayloadI } from './auth/types';
 import axios from './customAxios';
-
 class Api {
   requestGetCandidates = async () => {
     const res = await axios.get('candidates/');
     return res.data;
   };
 
-  requestPostVote = async () => {
-    const res = await axios.post('');
-    return res.data;
+  requestPostVote = async (id: number) => {
+    const token = localStorage.getItem('token: ');
+    await axios.post(`candidates/${id}/vote/`, null, {
+      headers: {
+        Authorization: `JWT ${token}`,
+      },
+    });
   };
 
   requestPostSignUp = async (payload: SignUpPayloadI) => {
