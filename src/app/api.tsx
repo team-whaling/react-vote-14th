@@ -1,5 +1,6 @@
 import { LoginPayloadI, SignUpPayloadI } from './auth/types';
 import axios from './customAxios';
+const token = localStorage.getItem('token');
 class Api {
   requestGetCandidates = async () => {
     const res = await axios.get('candidates/');
@@ -7,12 +8,13 @@ class Api {
   };
 
   requestPostVote = async (id: number) => {
-    const token = localStorage.getItem('token: ');
-    await axios.post(`candidates/${id}/vote/`, null, {
+    console.log(token);
+    const res = await axios.post(`candidates/${id}/vote/`, null, {
       headers: {
         Authorization: `JWT ${token}`,
       },
     });
+    console.log(res);
   };
 
   requestPostSignUp = async (payload: SignUpPayloadI) => {
@@ -26,7 +28,11 @@ class Api {
   };
 
   requestCheckUserVerification = async () => {
-    const res = await axios.post('user/verify/');
+    const res = await axios.post('user/verify/', null, {
+      headers: {
+        Authorization: `JWT ${token}`,
+      },
+    });
     console.log('api res: ', res);
     return res.status;
   };
