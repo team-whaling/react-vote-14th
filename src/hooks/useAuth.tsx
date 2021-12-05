@@ -1,24 +1,40 @@
 import React from 'react';
 import {
-  postLoginAsync,
-  LoginPayloadI,
-  postSignUpAsync,
-  SignUpPayloadI,
-} from '../app/auth/auth';
-import { useAppDispatch } from '../app/store';
+  checkUserVerificationThunk,
+  postLoginThunk,
+  postSignUpThunk,
+} from '../app/auth/thunks';
+import { LoginPayloadI, SignUpPayloadI } from '../app/auth/types';
+import { useAppDispatch, useAppSelector } from '../app/store';
 
 const useAuth = () => {
   const dispatch = useAppDispatch();
+  const authLoading = useAppSelector((state) => state.authReducer.loading);
+  const authorized = useAppSelector((state) => state.authReducer.authorized);
+  const loginSuccess = useAppSelector((state) => state.authReducer.success);
+  const userName = useAppSelector((state) => state.authReducer.username);
 
   const postLogin = (loginData: LoginPayloadI) => {
-    dispatch(postLoginAsync(loginData));
+    dispatch(postLoginThunk(loginData));
   };
 
   const postSignUp = (signUpData: SignUpPayloadI) => {
-    dispatch(postSignUpAsync(signUpData));
+    dispatch(postSignUpThunk(signUpData));
   };
 
-  return { postLogin, postSignUp };
+  const checkUserVerification = () => {
+    dispatch(checkUserVerificationThunk());
+  };
+
+  return {
+    postLogin,
+    postSignUp,
+    checkUserVerification,
+    authorized,
+    loginSuccess,
+    userName,
+    authLoading,
+  };
 };
 
 export default useAuth;
