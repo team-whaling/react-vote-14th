@@ -10,7 +10,7 @@ const useVote = () => {
   };
   useEffect(() => {
     dispatch(getCandidateThunk());
-  }, [dispatch]);
+  }, [candidates, dispatch]);
   return {
     candidates,
     postVote,
