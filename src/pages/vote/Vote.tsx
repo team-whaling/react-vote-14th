@@ -4,16 +4,21 @@ import styled from 'styled-components';
 import { Col, Row } from '../../components/Containers';
 import { Button } from 'antd';
 const Vote = () => {
-  const { candidates } = useVote();
+  const { candidates, postVote } = useVote();
+  const onVoteClicked = (id: number) => {
+    postVote(id);
+  };
   return (
     <Container>
       {candidates.map((candidate) => {
         return (
-          <VoteContainer>
-            <div key={candidate.id}>
+          <VoteContainer key={candidate.id}>
+            <div>
               {candidate.name} {candidate.vote}
             </div>
-            <Button>투표하기</Button>
+            <Button onClick={() => onVoteClicked(candidate.id)}>
+              투표하기
+            </Button>
           </VoteContainer>
         );
       })}

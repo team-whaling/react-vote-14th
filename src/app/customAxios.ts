@@ -5,7 +5,7 @@ import axios from 'axios';
 axios.defaults.baseURL = SERVER_URL;
 
 axios.defaults.headers.common = {
-  Authorization: `JWT ${window.localStorage.getItem('token')}`,
+  Authorization: `Bearer ${window.localStorage.getItem('token')}`,
 };
 
 axios.defaults.maxBodyLength = Infinity;

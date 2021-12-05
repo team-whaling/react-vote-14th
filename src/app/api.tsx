@@ -28,11 +28,7 @@ class Api {
   };
 
   requestCheckUserVerification = async () => {
-    const res = await axios.post('user/verify/', null, {
-      headers: {
-        Authorization: `JWT ${token}`,
-      },
-    });
+    const res = await axios.post('user/verify/');
     console.log('api res: ', res);
     return res.status;
   };
