@@ -38,7 +38,7 @@ const Container = styled(Col)`
 
   margin: 0 auto;
 
-  background: linear-gradient(45deg, lightblue, lightpink);
+  background: linear-gradient(45deg, lightyellow, lightpink);
 `;
 const StyledTable = styled(Table)`
   color: black;
@@ -49,10 +49,11 @@ const StyledTable = styled(Table)`
     background-color: transparent;
   }
   && tbody > tr:hover > td {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 `;
 const StyledButton = styled(Button)`
   border: none;
+  background: none;
 `;
 export default Vote;
