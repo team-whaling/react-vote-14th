@@ -37,8 +37,6 @@ const Container = styled(Col)`
   height: 100vh;
 
   margin: 0 auto;
-
-  background: linear-gradient(45deg, lightyellow, lightpink);
 `;
 const StyledTable = styled(Table)`
   color: black;
