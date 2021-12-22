@@ -7,7 +7,10 @@ import {
 import { ActionT, AuthReducerI, SET_AUTH_LOADING } from './types';
 
 const initialState: AuthReducerI = {
-  username: '',
+  user: {
+    username: '',
+    voted: false,
+  },
   loading: false,
   success: false,
   authorized: false,
@@ -26,7 +29,10 @@ export const authReducer = createReducer<AuthReducerI, ActionT>(initialState, {
   .handleAction(postLoginAsync.success, (state, action) => ({
     ...state,
     success: true,
-    username: action.payload.user.username,
+    user: {
+      username: action.payload.user.username,
+      voted: action.payload.user.voted,
+    },
   }))
   .handleAction(postLoginAsync.failure, (state, action) => ({
     ...state,
