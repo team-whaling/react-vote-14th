@@ -13,7 +13,7 @@ const useAuth = () => {
   const authorized = useAppSelector((state) => state.authReducer.authorized);
   const loginSuccess = useAppSelector((state) => state.authReducer.success);
   const user = useAppSelector((state) => state.authReducer.user);
-  //console.log(useAppSelector((state) => state.authReducer));
+  console.log(useAppSelector((state) => state.authReducer));
   const postLogin = (loginData: LoginPayloadI) => {
     dispatch(postLoginThunk(loginData));
   };

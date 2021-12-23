@@ -8,6 +8,7 @@ const withAuth = (
 ): ReactElement<any, string | JSXElementConstructor<any>> => {
   const Auth = () => {
     const { checkUserVerification, authorized, authLoading } = useAuth();
+
     const navigate = useNavigate();
     useEffect(() => {
       checkUserVerification();
