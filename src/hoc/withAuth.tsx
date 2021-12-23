@@ -17,10 +17,9 @@ const withAuth = (
       if (isAuthorizingNeed) {
         if (authorized) {
           navigate('/vote');
-          return;
-        }
+        } else navigate('/login');
       }
-    }, [authorized]);
+    }, [authorized, navigate]);
 
     return authLoading ? <div>Loading...</div> : <WrappedComponent />;
   };
