@@ -8,13 +8,11 @@ class Api {
   };
 
   requestPostVote = async (id: number) => {
-    console.log(token);
     const res = await axios.post(`candidates/${id}/vote/`, null, {
       headers: {
         Authorization: `JWT ${token}`,
       },
     });
-    console.log(res);
   };
 
   requestPostSignUp = async (payload: SignUpPayloadI) => {
@@ -33,7 +31,6 @@ class Api {
         Authorization: `JWT ${token}`,
       },
     });
-    console.log('api res: ', res);
     return res.status;
   };
 }
